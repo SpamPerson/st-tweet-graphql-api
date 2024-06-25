@@ -95,6 +95,7 @@ const resolvers = {
          return users;
       },
       allMovies() {
+         console.log('called movies')
          return fetch('https://yts.mx/api/v2/list_movies.json')
          .then((response) => response.json()
          .then((json) => json.data.movies));
